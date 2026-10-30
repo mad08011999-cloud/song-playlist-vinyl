@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Poojith's Record Shop · Song Playlist</title>
+<meta name="description" content="352 songs from Poojith's saved collections as a vinyl record shop — search, filters, playlists and recommendations.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23111'/><circle cx='50' cy='50' r='16' fill='%23e0703a'/><circle cx='50' cy='50' r='3' fill='%23111'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <div class="brand"><span class="logo"></span><div><h1>Poojith's Record Shop</h1><p class="sub" id="count">Loading the crates…</p></div></div>
+  <div class="views" role="tablist"><button class="vbtn on" data-v="grid" id="vGrid">▦ Grid</button><button class="vbtn" data-v="store" id="vStore">🏪 Record store</button></div>
+  <div id="authBox" class="authbox"></div>
+</header>
+<section class="bar" id="bar">
+  <input id="q" type="search" placeholder="Search title, artist, album…" aria-label="Search">
+  <select id="fLang" aria-label="Language"><option value="">All languages</option></select>
+  <select id="fType" aria-label="Type"><option value="">All types</option></select>
+  <select id="sort" aria-label="Sort"><option value="pop">Most saved</option><option value="title">Title A–Z</option><option value="artist">Artist A–Z</option><option value="new">Newest</option><option value="old">Oldest</option></select>
+  <div class="tabs" id="tabs"><button data-t="all" class="on">All</button><button data-t="foryou">✨ For you</button><button data-t="liked">♥ Liked</button><button data-t="want">🎧 Want to listen</button><button data-t="played">✓ Played</button><button data-t="mine">＋ My adds</button><select id="plSel" aria-label="Playlists"><option value="">🎶 Playlists…</option></select></div>
+</section>
+<main id="gridView">
+  <details class="spot" id="spot"><summary>Play the whole Spotify playlist (346 tracks)</summary><iframe loading="lazy" title="Spotify playlist" data-src="https://open.spotify.com/embed/playlist/1G3dlgJC0MyCt4EOHt88Va?utm_source=generator&theme=0" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></details>
+  <div id="recNote" class="note" hidden></div>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="note" hidden>No records in this crate. Try clearing filters.</p>
+</main>
+<section id="storeView" hidden>
+  <canvas id="c3"></canvas>
+  <div class="hud" id="hud">Drag to look · WASD / arrows to walk · click a crate to flip through it · click a record to pick it up</div>
+  <button class="btn back" id="backGrid">◀ Back to grid</button>
+  <div class="crateui" id="crateUI" hidden><button class="btn" id="cPrev">◀ Flip</button><span id="cInfo"></span><button class="btn" id="cNext">Flip ▶</button><button class="btn acc" id="cPick">Pick up</button><button class="btn" id="cLeave">Leave crate</button></div>
+  <div class="pad" id="pad"><button data-k="f">▲</button><button data-k="l">◀</button><button data-k="b">▼</button><button data-k="r">▶</button></div>
+  <div class="pick" id="pickUI" hidden><div class="pickInfo" id="pickInfo"></div></div>
+  <div class="glfail" id="glFail" hidden><h2>3D store needs WebGL</h2><p>Your browser couldn't start WebGL, so the walk-in record store is unavailable. The grid has every record.</p><button class="btn acc" id="glBack">Back to grid</button></div>
+</section>
+<dialog id="dlg" class="dlg"><button class="x" data-close>✕</button><div id="dlgBody"></div></dialog>
+<dialog id="auth" class="dlg small"><button class="x" data-close>✕</button>
+  <h2>Sign in</h2><p class="hint">Same account as the movie recommendations site.</p>
+  <div class="seg"><button data-m="in" class="on">Sign in</button><button data-m="up">Create account</button></div>
+  <form id="aForm" novalidate><label>Email<input id="aEm" type="email" autocomplete="email"></label><span class="err" id="eEm"></span>
+  <label>Password<input id="aPw" type="password" autocomplete="current-password"></label><span class="err" id="ePw"></span>
+  <button class="btn acc wide" id="aSub">Sign in</button></form>
+  <div class="row"><button class="link" id="magic">Email me a sign-in link</button><button class="link" id="forgot">Forgot password?</button></div>
+  <p class="msg" id="msg" hidden></p>
+  <form id="aRec" hidden><label>New password<input id="nPw" type="password" autocomplete="new-password"></label><span class="err" id="eN"></span><button class="btn acc wide">Set password</button></form>
+</dialog>
+<dialog id="addDlg" class="dlg small"><button class="x" data-close>✕</button>
+  <h2>Add a song</h2><p class="hint">It goes into your own library and shows up as a record in the grid and the store.</p>
+  <form id="addForm" novalidate>
+    <label>Song title *<input id="adT" maxlength="200" required></label>
+    <label>Artist *<input id="adA" maxlength="200" required></label>
+    <div class="two"><label>Language<input id="adL" maxlength="40" list="langList" placeholder="English"></label><label>Genre / type<input id="adG" maxlength="60" list="typeList" placeholder="Pop"></label></div>
+    <label>Link (Spotify / Apple Music / YouTube)<input id="adU" maxlength="500" type="url" placeholder="https://…"></label>
+    <span class="err" id="adErr"></span><button class="btn acc wide" id="adSub">Add to my crate</button>
+  </form><datalist id="langList"></datalist><datalist id="typeList"></datalist>
+</dialog>
+<dialog id="prefDlg" class="dlg small"><button class="x" data-close>✕</button>
+  <h2>Your taste</h2><p class="hint">Saved to your account and used by “For you”.</p>
+  <h4>Languages</h4><div class="chips" id="pLang"></div><h4>Genres</h4><div class="chips" id="pGen"></div>
+  <label>Favourite artists (comma separated)<input id="pArt" maxlength="600"></label>
+  <button class="btn acc wide" id="pSave">Save taste</button>
+</dialog>
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module" src="app.js"></script>
+</body></html>
