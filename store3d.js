@@ -115,7 +115,7 @@ export async function mount(canvas,api){
     el.innerHTML=`<h2>${esc(s.t)}</h2><div style="color:#6d5a45;margin:2px 0 6px">${esc(s.a)}</div>${api.detailsKV(s)}${api.actionsHTML(s)}
      ${sid?`<iframe style="border-radius:12px;margin-top:8px" src="https://open.spotify.com/embed/track/${sid}?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`:""}
      <div class="row"><button class="btn" id="pFlip">↻ Flip sleeve</button><button class="btn" id="pMore">More like this</button><button class="btn acc" id="pBack">Put it back</button></div>`;
-    api.wireActions(el,s,drawPick);$("#pFlip").onclick=()=>{insp.flip=insp.flip?0:1};$("#pBack").onclick=()=>drop();$("#pMore").onclick=()=>api.openDetail(s.id)}
+    api.wireActions(el,s,drawPick);$("#pFlip").onclick=()=>{insp.flip=insp.flip?0:1;insp.yaw=0;insp.pitch=0};$("#pBack").onclick=()=>drop();$("#pMore").onclick=()=>api.openDetail(s.id)}
   function drop(silent){if(!insp)return;iscene.remove(insp.root);insp.root.traverse(o=>{o.geometry?.dispose?.()});insp=null;$("#pickUI").hidden=true;if(!silent){$("#crateUI").hidden=!focus;$("#pad").hidden=!!focus;$("#hud").textContent=HUD}}
   const HUD=$("#hud").textContent;
   // ---------- navigation ----------
@@ -144,7 +144,7 @@ export async function mount(canvas,api){
   $("#cPrev").onclick=()=>flip(-1);$("#cNext").onclick=()=>flip(1);$("#cPick").onclick=pickCur;$("#cLeave").onclick=leave;
   // ---------- loop ----------
   function resize(){const w=canvas.clientWidth||innerWidth,h=canvas.clientHeight||innerHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
-    const side=!$("#pickUI").hidden&&w>700;icam.aspect=w/h;icam.position.set(0,w<h?.55:.32,w<h?1.9:1.05);icam.lookAt(0,w<h?.12:.05,0);icam.setViewOffset(w,h,side?Math.min(180,w*.14):0,w<=700&&insp?h*.18:0,w,h);icam.updateProjectionMatrix()}
+    const side=!$("#pickUI").hidden&&w>700;icam.aspect=w/h;icam.position.set(0,w<h?.55:.32,w<h?2.5:1.05);icam.lookAt(0,w<h?.12:.05,0);icam.setViewOffset(w,h,side?Math.min(180,w*.14):0,w<=700&&insp?h*.18:0,w,h);icam.updateProjectionMatrix()}
   addEventListener("resize",resize);resize();
   let running=true,last=performance.now();const tmp=new THREE.Vector3(),lookM=new THREE.Vector3();
   function tick(now){if(!running)return;requestAnimationFrame(tick);const dt=Math.min(.05,(now-last)/1000);last=now;
