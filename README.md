@@ -2,7 +2,7 @@
 
 Live: https://mad08011999-cloud.github.io/song-playlist-vinyl/
 
-352 songs from [poojithmalla8/song_playlist](https://github.com/poojithmalla8/song_playlist) (data copied into `data/`, built into `catalog.json` + sleeve art in `art/` and `atlas/` by `scripts/build_catalog.py`).
+358 songs from [poojithmalla8/song_playlist](https://github.com/poojithmalla8/song_playlist) (data copied into `data/`, built into `catalog.json` + sleeve art in `art/` and `atlas/` by `scripts/build_catalog.py`).
 
 - **Grid** (default): search, language / type filters, sort, Spotify / Apple Music / YouTube links, embedded Spotify player, More like this.
 - **Record store** (3D, three.js): crates by genre family, flip through records, pick one up — the vinyl slides out of its sleeve onto a spinning turntable; drag to turn, flip the sleeve to read the back. Face-out "For you" and "Most saved" shelves. WebGL fallback + always-visible *Back to grid*.

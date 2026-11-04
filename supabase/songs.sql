@@ -215,7 +215,7 @@ $$;
 revoke all on function public.song_similar(text, int) from public;
 grant execute on function public.song_similar(text, int) to anon, authenticated;
 
--- ---------- seed: the 352 catalog songs (re-runnable) ----------
+-- ---------- seed: the 358 catalog songs (re-runnable) ----------
 insert into public.song_catalog (id,title,artist,language,genre,album,year,popularity) values
 ('3MjUtNVVq3C8Fn0MP3zhXa','...Baby One More Time','Britney Spears','English','Pop','...Baby One More Time (Deluxe Version)',1998,2),
 ('6b8Be6ljOzmkOmFslEb23P','24K Magic','Bruno Mars','English','Pop','24K Magic',2016,1),
@@ -300,6 +300,8 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('2jSJm3Gv6GLxduWLenmjKS','Digital Bath','Deftones','English','Hard Rock','White Pony',2000,1),
 ('7rXK1ksEA28ZnOQSwMXGuY','Dil Se','Yawar Abdal','Hindi','Unknown','',null,1),
 ('0RFxx8rwddnW4j9COvLmGK','Dilaan De Rajya','Maninder Buttar','Punjabi','Unknown','',null,1),
+('1VUhLrBErkwHoS0vGEfpzm','Dive In','Finn Askew','English','Pop','Dive In - Single',2025,1),
+('6pgTnSZA6ululNCsrhBsZm','Do I Look Like Jesus Christ?!','Dame Atlas','English','Unknown','',null,1),
 ('2yi7HZrBOC4bMUSTcs4VK6','Do You Want to Build a Snowman','Agatha Lee Monn, Katie Lopez, and Kristen Bell','English','Musicals','Frozen (Original Motion Picture Soundtrack)',2013,1),
 ('3PfIrDoz19wz7qK7tYeu62','Don''t Start Now','Dua Lipa','English','Pop','Don''t Start Now - Single',2019,3),
 ('27xkOIER6uDLKALIelHylZ','Don’t Say You Love Me','Jin','English','K-Pop','Echo',2025,1),
@@ -495,10 +497,13 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('799ZxMkKLLWdxpXdpogkDi','SOBER','daste.','English','Indie Pop','SOBER - Single',2019,1),
 ('1qDrWA6lyx8cLECdZE7TV7','Somebody That I Used to Know','Gotye feat. Kimbra','English','Alternative / Indie','Making Mirrors',2011,1),
 ('1SKPmfSYaPsETbRHaiA18G','Somewhere Only We Know','Keane','English','Pop','Somewhere Only We Know - EP',2004,1),
+('1Qj8q4Y7868u5q23jPDUS7','SONDER','late monday','English','Pop','SONDER - Single',2026,1),
 ('06CUyVD4i6YQ8X9dXC7mI6','Soundtrack for Your Backseat','sundiver ca','English','Alternative / Indie','Superstar Baby',2019,1),
 ('1ujxjsoNvh4XgS2fUNwkZ2','Space Song','Beach House','English','Alternative / Indie','Depression Cherry',2015,1),
 ('0pQskrTITgmCMyr85tb9qq','Starman - 2012 Remaster','David Bowie','English','Pop','The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)',1972,1),
 ('3DgV3M5T98FfrYtRfkm5RQ','Stay For One More Night','Goodvibes Sound','English','Alternative / Indie','Stay For One More Night - Single',2021,1),
+('4w1e3b3GGYIz75SlMcFchT','still the same i see','sondaeblu','English','R&B / Soul','u said. this time will be different.',2026,1),
+('7AGXTYi7SuenK2U5j3L8aW','still wanna hold u','SAMSON','English','Hip-Hop / Rap','Understand. - EP',2024,1),
 ('4nVBt6MZDDP6tRVdQTgxJg','Story of My Life','One Direction','English','Pop','Midnight Memories',2013,2),
 ('3CRDbSIZ4r5MsZ0YwxuEkn','Stressed Out','Twenty One Pilots','English','Alternative / Indie','Blurryface',2015,1),
 ('75z2YLg5Lkqf6qL9XOY8tV','Such Great Heights','The Postal Service','English','Electronic / Dance','Give Up (Deluxe 10th Anniversary Edition)',2003,1),
@@ -541,6 +546,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('6hcXtEoIWQErXqyvOMZnLs','Training Season (Acoustic Version)','Dua Lipa','English','Pop','Training Season (Acoustic Version) - Single',2023,1),
 ('3S7HNKPakdwNEBFIVTL6dZ','Treacherous (Taylor''s Version)','Taylor Swift','English','Pop','Red (Taylor’s Version) [+ A Message from Taylor]',2021,1),
 ('1kS9d4x0ftbfq65eaBGSCT','Try','Nelly Furtado','English','Pop','Folklore',2003,1),
+('5kR2eJal3foVQ48L1Dp4hh','Trying Things','Odeal','English','R&B / Soul','For A Good Time...',2026,1),
 ('4uAQEXmgvtEDKQgeyYrlUd','Tum Se Tum Tak','Niyam','Hindi','Indie Pop','Tum Se Tum Tak - Single',2026,1),
 ('4gM2BugovNf4bvXdjZODzG','Turn Off The Light','Nelly Furtado','English','Pop','Whoa, Nelly!',2000,1),
 ('4B1rpPmQXwj78wk6aIGwwU','Two Ghosts','Harry Styles','English','Pop','Harry Styles',2017,1),
