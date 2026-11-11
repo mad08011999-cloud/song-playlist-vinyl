@@ -215,7 +215,7 @@ $$;
 revoke all on function public.song_similar(text, int) from public;
 grant execute on function public.song_similar(text, int) to anon, authenticated;
 
--- ---------- seed: the 358 catalog songs (re-runnable) ----------
+-- ---------- seed: the 363 catalog songs (re-runnable) ----------
 insert into public.song_catalog (id,title,artist,language,genre,album,year,popularity) values
 ('3MjUtNVVq3C8Fn0MP3zhXa','...Baby One More Time','Britney Spears','English','Pop','...Baby One More Time (Deluxe Version)',1998,2),
 ('6b8Be6ljOzmkOmFslEb23P','24K Magic','Bruno Mars','English','Pop','24K Magic',2016,1),
@@ -268,6 +268,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('7kJlTKjNZVT26iwiDUVhRm','Blow Your Mind','Dua Lipa','English','Pop','Blow Your Mind (Mwah) - Single',2016,1),
 ('1dtLFRRmiGg2nBaV4Rg9Ux','Blue','Far Caspian','English','Indie Rock','Between Days - EP',2018,1),
 ('1Ng9fMWIR9BvnWPCOVHzfB','Blue Bird','Ikimono-gakari','English','J-Pop','Chou Ikimonobakari Tennen Kinen Members Best Selection',2016,1),
+('0dPF6g1FbTnIAf6dHWtSK9','Blush','Miller Blue','English','R&B / Soul','Blush - Single',2021,1),
 ('2JiDi0qAXsPwhPqA2qaKGt','Bohemian Rhapsody','Queen','English','Rock','A Night At The Opera (Deluxe Edition)',1975,1),
 ('6YrHQ3Uv9YXK2gJNVTlT8P','Brass in Pocket','Pretenders','English','Rock','Pretenders (Expanded Edition) [2006 Remaster]',1979,1),
 ('285hMzLhJwHVLe9QT9qilk','Breakeven','The Script','English','Pop','The Script',2008,1),
@@ -378,6 +379,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('1T4zpIClNclqDC6fVZKjRZ','It Hurts to Be Alone','Bob Marley & The Wailers','English','Roots Reggae','Trenchtown Days: Birth of a Legend',1977,1),
 ('44A0o4jA8F2ZF03Zacwlwx','Je te laisserai des mots','Patrick Watson','English','Alternative / Indie','Je Te Laisserai Des Mots - Single',2010,1),
 ('4G92yYrUs0cvY7G41YRI0z','Jealous','Labrinth','English','Pop','Jealous - Single',2014,1),
+('0OWrB5fNAY53HKowEtGu7c','Joy (Wouldn''t That Be Good)','Joy Anonymous','English','Electronic / Dance','Joy (Wouldn''t That Be Good) [feat. Elise My Niece & Gud Jon] - Single',2019,1),
 ('2HbCo1YJTZyF8hD3eyFKPN','Just Keep Watching','Tate McRae','English','Pop','F1 The Album',2025,1),
 ('7BqBn9nzAq8spo5e7cZ0dJ','Just the Way You Are','Bruno Mars','English','Pop','Doo-Wops & Hooligans (Deluxe)',2010,1),
 ('3Uwok7aLLQyXhfqNlekSim','Kaise Ho Tum','Divyam Sodhi','Hindi','Indian Pop','Ehsaas - EP',2025,1),
@@ -480,6 +482,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('2aI21FnmY7TJVKeMaoQZ0t','Say It Right','Nelly Furtado','English','Pop','Loose',2006,1),
 ('42ydLwx4i5V49RXHOozJZq','Scars To Your Beautiful','Alessia Cara','English','Pop','Know-It-All',2015,1),
 ('2t0wwvR15fc3K1ey8OiOaN','Selfless','The Strokes','English','Alternative / Indie','The New Abnormal',2020,1),
+('4nsiKM4S8cRU3oWNiTOeWz','Settle','BAYNK, Sinéad Harnett','English','Electronic / Dance','Settle - Single',2018,1),
 ('3dPQuX8Gs42Y7b454ybpMR','Seven Nation Army','The White Stripes','English','Rock','Elephant',2003,1),
 ('6INLpBxo9F5QMer04VXEnd','Sexy Boy','Air','English','Electronic / Dance','Moon Safari',1998,1),
 ('35o9a4iAfLl5jRmqMX9c1D','Shape of My Heart','Backstreet Boys','English','Pop','Black & Blue',2000,2),
@@ -542,6 +545,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('xd46c860e7b3f','TOMA NO PEITO','GIØ','English','Unknown','',null,1),
 ('0GO8y8jQk1PkHzS31d699N','Tongue Tied','Grouplove','English','Alternative / Indie','Never Trust a Happy Song',2011,1),
 ('1BXela7xASLw1DCrv9ACBA','Tortoise','Jordan Mackampa and Harvey Gunn, Joel Baker, Ashley Henry','English','Unknown','',null,1),
+('7mSiG1E3UxhhbLiw11Hj0v','Touch','Bearcubs','English','Electronica','Touch - Single',2014,1),
 ('6Qb7YsAqH4wWFUMbGsCpap','Training Season','Dua Lipa','English','Pop','Training Season - Single',2024,4),
 ('6hcXtEoIWQErXqyvOMZnLs','Training Season (Acoustic Version)','Dua Lipa','English','Pop','Training Season (Acoustic Version) - Single',2023,1),
 ('3S7HNKPakdwNEBFIVTL6dZ','Treacherous (Taylor''s Version)','Taylor Swift','English','Pop','Red (Taylor’s Version) [+ A Message from Taylor]',2021,1),
@@ -572,6 +576,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('6zC0mpGYwbNTpk9SKwh08f','Wonderful Tonight','Eric Clapton','English','Rock','Slowhand (35th Anniversary Edition)',1977,1),
 ('72TFWvU3wUYdUuxejTTIzt','Work','Rihanna','English','Pop','ANTI',2016,1),
 ('0IOtFlCwTsHdekpZsaK0Ua','World Is Mine','Lane 8, Kasbo, BJOERN','English','Electronic / Dance','World Is Mine',2026,1),
+('73R3ZGNODH8sl1oRtdGVl1','y como te digo que','Latin Mafia','Spanish','Latin','Todos los días todo el día',2024,1),
 ('3afNMElBBtkRPyR79DMyMJ','Yeh Duniya','Anubha Bajaj','Hindi','Unknown','',null,2),
 ('31ouz9wpEfWhzDWsqCMFRP','Young Blood','The Naked and Famous','English','Alternative / Indie','Young Blood (Tiësto & Hardwell Remix) - Single',2012,1),
 ('6UfEFq0rTAvaMvwnUyF9ub','Zulfien','Mehul Mahesh, DJ Anik','Hindi/Urdu','Unknown','',null,1)
