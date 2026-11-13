@@ -215,7 +215,7 @@ $$;
 revoke all on function public.song_similar(text, int) from public;
 grant execute on function public.song_similar(text, int) to anon, authenticated;
 
--- ---------- seed: the 363 catalog songs (re-runnable) ----------
+-- ---------- seed: the 369 catalog songs (re-runnable) ----------
 insert into public.song_catalog (id,title,artist,language,genre,album,year,popularity) values
 ('3MjUtNVVq3C8Fn0MP3zhXa','...Baby One More Time','Britney Spears','English','Pop','...Baby One More Time (Deluxe Version)',1998,2),
 ('6b8Be6ljOzmkOmFslEb23P','24K Magic','Bruno Mars','English','Pop','24K Magic',2016,1),
@@ -232,6 +232,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('5c1QJAiC3773EwiZLwHf5x','Again','Lenny Kravitz','English','Rock','Greatest Hits',2000,1),
 ('0C5vCd4id8DxoDM9HSUpBh','Aise Na Pagal Karo','Kalra Saab & Bharath','Hindi/Urdu','Unknown','',null,1),
 ('6kEpjptnAwt11Atr4cEMe1','All Good Things','Nelly Furtado','English','Pop','Live Session (iTunes Exclusive) - EP',2006,1),
+('0NlGoUyOJSuSHmngoibVAs','All I Want','Kodaline','English','Alternative / Indie','In a Perfect World (Expanded Edition)',2012,1),
 ('3U4isOIWM3VvDubwSI3y7a','All of Me','John Legend','English','R&B / Soul','Love in the Future (Expanded Edition)',2013,2),
 ('3cfOd4CMv2snFaKAnMdnvK','All Star','Smash Mouth','English','Alternative / Indie','Astro Lounge',1999,2),
 ('4bJygwUKrRgq1stlNXcgMg','All The Things She Said','t.A.T.u.','English','Pop','200 KM/H In the Wrong Lane',2002,1),
@@ -294,6 +295,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('2tpWsVSb9UEmDRxAl1zhX1','Counting Stars','OneRepublic','English','Pop','Native (Deluxe)',2013,1),
 ('0nsIevK1SeDfZzDOi6Si75','Crush','Ethel Cain','English','Unknown','',null,1),
 ('7hoywpB0PVXwQKll5TaQiT','Crutch','Love Spells','English','Alternative / Indie','Crutch - Single',2026,1),
+('2cmRpmO04TLaKPzmAzySYZ','Dance Yrself Clean','LCD Soundsystem','English','Electronic / Dance','This Is Happening',2010,1),
 ('5rYTMjVkGioNF4MpSQISlg','Desoleil (Brilliant Corners)','Loyle Carner','English','Unknown','',null,1),
 ('1PYV3TA7E1elt9AFcQmOIZ','Dhun','Navjot Ahuja','Hindi/Urdu','Rock','Dhun - Single',2022,1),
 ('7oDd86yk8itslrA9HRP2ki','Die for You (Remix)','The Weeknd & Ariana Grande','English','R&B / Soul','Die For You (Remix) - Single',2023,1),
@@ -499,12 +501,14 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('5hx7w26Zi3zafMgvMTUqF6','SNAP','Rosa Linn','English','Indie Pop','SNAP - Single',2022,1),
 ('799ZxMkKLLWdxpXdpogkDi','SOBER','daste.','English','Indie Pop','SOBER - Single',2019,1),
 ('1qDrWA6lyx8cLECdZE7TV7','Somebody That I Used to Know','Gotye feat. Kimbra','English','Alternative / Indie','Making Mirrors',2011,1),
+('3bNv3VuUOKgrf5hu3YcuRo','Someone Like You','Adele','English','Pop','21',2011,1),
 ('1SKPmfSYaPsETbRHaiA18G','Somewhere Only We Know','Keane','English','Pop','Somewhere Only We Know - EP',2004,1),
 ('1Qj8q4Y7868u5q23jPDUS7','SONDER','late monday','English','Pop','SONDER - Single',2026,1),
 ('06CUyVD4i6YQ8X9dXC7mI6','Soundtrack for Your Backseat','sundiver ca','English','Alternative / Indie','Superstar Baby',2019,1),
 ('1ujxjsoNvh4XgS2fUNwkZ2','Space Song','Beach House','English','Alternative / Indie','Depression Cherry',2015,1),
 ('0pQskrTITgmCMyr85tb9qq','Starman - 2012 Remaster','David Bowie','English','Pop','The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)',1972,1),
 ('3DgV3M5T98FfrYtRfkm5RQ','Stay For One More Night','Goodvibes Sound','English','Alternative / Indie','Stay For One More Night - Single',2021,1),
+('5Nm9ERjJZ5oyfXZTECKmRt','Stay With Me','Sam Smith','English','Pop','In the Lonely Hour',2014,1),
 ('4w1e3b3GGYIz75SlMcFchT','still the same i see','sondaeblu','English','R&B / Soul','u said. this time will be different.',2026,1),
 ('7AGXTYi7SuenK2U5j3L8aW','still wanna hold u','SAMSON','English','Hip-Hop / Rap','Understand. - EP',2024,1),
 ('4nVBt6MZDDP6tRVdQTgxJg','Story of My Life','One Direction','English','Pop','Midnight Memories',2013,2),
@@ -516,6 +520,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('1jUkHIMc7UaJQuzWe5Iop2','Sweet Disposition','The Temper Trap','English','Soundtrack','(500) Days of Summer (Music from the Motion Picture)',2008,2),
 ('1QbOvACeYanja5pbnJbAmk','Take Me Home, Country Roads','John Denver','English','Singer/Songwriter','The Windstar Greatest Hits',1971,1),
 ('4w8niZpiMy6qz1mntFA5uM','Taki Taki','DJ Snake with Selena Gomez, Ozuna, and Cardi B','English','Urbano latino','Ozu Vivo (Live)',2018,1),
+('67Hna13dNDkZvBpTXRIaOJ','Teardrop','Massive Attack','English','Electronic / Dance','Mezzanine',1998,1),
 ('48Ix6ReYdJf2H4mKb3TIpj','Tera Hone Laga Hoon','Atif Aslam and Alisha Chinai','Hindi','Bollywood','Ajab Prem Ki Ghazab Kahani (Original Motion Picture Soundtrack)',2009,1),
 ('5GfZTeR24ugCddSRj0BKU9','Tere Bin Laage','Rashmeet Kaur','Hindi','Indian Pop','Tere Bin Laage (Lofi Flip) - Single',2024,1),
 ('3yUcJwYu7fXAfqMj9krY6l','Thank You','Dido','English','Pop','No Angel',1999,1),
@@ -560,6 +565,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('32OlwWuMpZ6b0aN2RZOeMS','Uptown Funk','Bruno Mars','English','Pop','Uptown Special',2014,1),
 ('4PIzo7o9Vydptg9Tw7ICcr','Velvet & Lace','TEXTILES','English','Pop','Textiles - EP',2021,1),
 ('5JQs2VdCFMSS4zDsN1cM01','Victory Lap','Dan Whitlam','English','Pop','Strangers (Again)',2026,1),
+('7cMFjxhbXBpOlais7KMF3j','Voyager','Daft Punk','English','Electronic / Dance','Discovery',2001,1),
 ('6TFr1fKugaFyGF7hzH2XQo','Waka Waka (This Time for Africa)','Shakira','English','Children''s Music','Lullaby Renditions of Shakira',2020,1),
 ('x7cf1261e669b','Watch Me','Labrinth','English','Unknown','',null,1),
 ('6kISMRfweKSvgHR0urMQFG','We Are Never Ever Getting Back Together','Taylor Swift','English','Country','Red',2012,2),
