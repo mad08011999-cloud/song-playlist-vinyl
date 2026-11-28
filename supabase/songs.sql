@@ -215,7 +215,7 @@ $$;
 revoke all on function public.song_similar(text, int) from public;
 grant execute on function public.song_similar(text, int) to anon, authenticated;
 
--- ---------- seed: the 430 catalog songs (re-runnable) ----------
+-- ---------- seed: the 431 catalog songs (re-runnable) ----------
 insert into public.song_catalog (id,title,artist,language,genre,album,year,popularity) values
 ('3MjUtNVVq3C8Fn0MP3zhXa','...Baby One More Time','Britney Spears','English','Pop','...Baby One More Time (Deluxe Version)',1998,2),
 ('6b8Be6ljOzmkOmFslEb23P','24K Magic','Bruno Mars','English','Pop','24K Magic',2016,1),
@@ -342,6 +342,7 @@ insert into public.song_catalog (id,title,artist,language,genre,album,year,popul
 ('4dfRBif6eGu0dLau5J5a2Q','FIRE!','Dijon','English','R&B / Soul','Baby',2025,1),
 ('3DamFFqW32WihKkTVlwTYQ','Fireflies','Owl City','English','Electronic / Dance','Ocean Eyes',2009,1),
 ('7LVHVU3tWfcxj5aiPFEW4Q','Fix You','Coldplay','English','Alternative / Indie','X&Y',2005,1),
+('6tObiiprRmFGg6QRp3Uyk8','Fly Baby','Leon Bridges','English','R&B / Soul','Happiness Anytime',2026,1),
 ('7ab0HieXGKChMstA42bn69','Foolmuse','Peter Cat Recording Co.','English','Alternative / Indie','Beta',2024,1),
 ('3sYDVtqO35oRSOIMx7dOqR','Freak','Lana Del Rey','English','Alternative / Indie','Honeymoon',2015,1),
 ('5tVA6TkbaAH9QMITTQRrNv','Free Fallin''','Tom Petty','English','Rock','Greatest Hits',1989,1),
